@@ -29,21 +29,24 @@ class App extends React.Component {
 	componentDidMount() {
 		this.setState({ characterArray: this.randomCharacters() })
 	}
-	
+
 	handleUnique = (clicked) => {
 		let newScore = this.state.score + 1;
-		this.setState({ 
-			score: newScore, 
+		this.setState({
+			score: newScore,
 			topScore: newScore > this.state.topScore ? newScore : this.state.topScore,
-			characterArray: this.randomCharacters(), 
-			clickImages: this.state.clickedImages.push(clicked) })
+			characterArray: this.randomCharacters(),
+			clickImages: this.state.clickedImages.push(clicked)
+		})
 	}
-	
+
 	handleDuplicate = () => {
-		this.setState({ 
+		alert("You hit a duplicate! You're score was " + this.state.score)
+		this.setState({
 			clickedImages: [],
 			score: 0,
-			characterArray: this.randomCharacters() })
+			characterArray: this.randomCharacters()
+		})
 	}
 
 	handleClick = (clicked) => {
@@ -51,24 +54,24 @@ class App extends React.Component {
 		console.log(this.state.clickedImages.includes(clicked))
 		this.state.clickedImages.includes(clicked) ? this.handleDuplicate() : this.handleUnique(clicked);
 	}
-	
+
 
 
 	render() {
 		return (
 			<div className="container-fluid">
-				<Navbar  
-				score={this.state.score}
-				topScore={this.state.topScore}
+				<Navbar
+					score={this.state.score}
+					topScore={this.state.topScore}
 				/>
 				<Header />
-				<Characters 
-				charactersArray={this.state.characterArray}
-				handleClick={this.handleClick}
+				<Characters
+					charactersArray={this.state.characterArray}
+					handleClick={this.handleClick}
 				/>
 			</div>
 		);
 	}
 }
 
-	export default App;
+export default App;
