@@ -4,9 +4,13 @@ body {
   font-family: sans-serif;
 }
 
+.container-fluid {
+	padding: 0;
+}
+
 .navbar {
 	background: grey;
-	min-height: 70px;
+	height: 40px;
 	width: 100%;
 	color: white;
 }
@@ -16,7 +20,9 @@ body {
 	background: lightgray;
 	min-height: 100px;
 	padding: 5px;
+	height: 80px;
 }
+
 
 span {
 	display: inline-block;
