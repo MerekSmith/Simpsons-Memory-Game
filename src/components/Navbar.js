@@ -1,20 +1,20 @@
 import React from "react";
-import '../index.css';
+import "../index.css";
 
+const Navbar = props => (
+  <div className="row bg-dark">
+    <div className="col-md-4 nav-headers">
+      <h3>Simpsons Memory Game</h3>
+    </div>
 
-const Navbar = (props) => (
-			<nav className="navbar navbar-expand-md navbar-dark bg-dark">
-				<span>
-					<a className="navbar-brand " href="/index">
-						Simpsons Memory Game
-		</a>
-				</span>
+    <div className="col-md-4 nav-headers">
+      <h3>Click an image to begin!</h3>
+    </div>
 
-				<span className="navbar-brand mb-0 h1">Click an image to begin!</span>
-
-				<span className="navbar-brand mb-0 h1">Score: {props.score} | Top Score: {props.topScore}</span>
-
-			</nav>
-		)
+    <div className="col-md-4 nav-headers">
+      <h3>Score: {props.score} | Top Score: {props.topScore}</h3>
+    </div>
+  </div>
+);
 
 export default Navbar;

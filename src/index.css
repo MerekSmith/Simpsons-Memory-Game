@@ -20,7 +20,6 @@ body {
 	background: lightgray;
 	min-height: 100px;
 	padding: 5px;
-	height: 80px;
 }
 
 
@@ -29,6 +28,11 @@ span {
 	padding: 26px 0;
 	width: 33.3%;
 	text-align: center;
+}
+
+.nav-headers {
+	text-align: center;
+	color: white;
 }
 
 .character-body {
